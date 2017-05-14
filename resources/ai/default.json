@@ -1,0 +1,53 @@
+{
+    "version": "0.0.0.1",
+    "questions": {
+        "1": {
+            "question": "Google",
+            "response": "A lot of people find out about me from Google."
+        },
+        "2": {
+            "question": "Bing",
+            "response": "Not many people find out about me from Bing. Hail Google!"
+        },
+        "3": {
+            "question": "Google Chrome",
+            "response": {
+                "text": "What about it?",
+                "if": {
+                    "condition": "NEXT CONTAINS is bad"
+                }
+            }
+        },
+        "4": {
+            "question": "You are talking *",
+            "if": {
+                "condition": "* = {swear_word}",
+                 "response": "Watch your language!"
+             },
+             "response": "Talking is my main function."
+         },
+         "5": {
+             "question": "I love dktapps",
+             "response": {
+                 "random": [
+                     "We all do! He carried PocketMine through the dark ages.",
+                     "Excuse me, his name is Dylan!"
+                 ]
+             }
+         },
+         "6": {
+             "question": "Can i have op *",
+             "response": {
+                 "random": [
+                     "Here you go!",
+                     "No, you haven't earned it."
+                 ]
+             },
+             "if": {
+                 "condition": "RESPONSE = Here you go!",
+                 "reponse": "{gray}You are now op!"
+             }
+         }
+     }
+}
+
