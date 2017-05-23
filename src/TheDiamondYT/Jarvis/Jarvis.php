@@ -45,7 +45,6 @@ class Jarvis extends PluginBase {
 
     public function onEnable() {
         $this->parser = new AIParser($this, json_decode(file_get_contents($this->getFile() . "resources/ai/default.json"), true));
-        $this->parser->parse("I love dktapps");
     }
     
     /**
@@ -62,7 +61,7 @@ class Jarvis extends PluginBase {
         if(!isset($data["question"]) or !isset($data["response"])) {
             throw new \Exception("Tried to register question but missing required data");
         }
-        $id = $data["id"] ?? mt_rand(20, 10000);
+        $id = $data["id"] ?? mt_rand(5, 10000);
     }
     
     /**

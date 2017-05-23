@@ -30,9 +30,13 @@ class PlayerListener implements Listener {
     }
     
     /**
-     * @param PlayerChatEvent $ev
+     * @param PlayerChatEvent $event
      */
-    public function onPlayerChat(PlayerChatEvent $ev) {
-    
+    public function onPlayerChat(PlayerChatEvent $event) {
+        $player = $event->getPlayer();
+        $message = $event->getMessage();
+        $parsed = $this->plugin->getParser()->parse($message);
+        
+        $player->sendMessage($message);
     }
 }
